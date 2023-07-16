@@ -1,0 +1,211 @@
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  src: local("Poppins Medium"),
+    url(fonts/poppins-medium-webfont.woff2) format("woff2"),
+    url(fonts/poppins-medium-webfont.woff) format("woff");
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 1);
+  background-color: #050c19;
+}
+
+.box {
+  width: 38rem;
+
+  position: relative;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+
+  padding: 3.2rem;
+  background-color: #222426;
+}
+
+.input-box {
+  width: 100%;
+  height: 7rem;
+  position: relative;
+}
+
+.input {
+  outline: none;
+  border: none;
+  background-color: rgba(49, 50, 51, 1);
+  width: 100%;
+  height: 100%;
+  font-size: inherit;
+  padding: 1.6rem;
+  padding-top: 4.2rem;
+  color: inherit;
+  border: 2px solid transparent;
+
+  transition: all 0.3s;
+}
+
+.input-label {
+  position: absolute;
+  top: 50%;
+  left: 1.6rem;
+  transform: translateY(-50%);
+
+  color: rgba(124, 128, 128, 1);
+  font-size: inherit;
+
+  transition: all 0.3s;
+}
+
+.input:focus ~ .input-label,
+.input:valid ~ .input-label {
+  font-size: 1.4rem;
+  top: 2rem;
+}
+
+.input:focus ~ .input-label {
+  color: rgba(1, 219, 194, 1);
+}
+
+.input:valid {
+  border: 2px solid rgba(1, 219, 194, 1);
+}
+
+.textarea-box {
+  width: 100%;
+  height: 10rem;
+
+  position: relative;
+}
+
+.textarea {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  background-color: rgba(49, 50, 51, 1);
+  padding-left: 1.6rem;
+  padding-top: 4rem;
+  padding-right: 1.6rem;
+  padding-bottom: 1rem;
+  font-size: 1.8rem;
+  font-family: "Poppins", sans-serif;
+  color: inherit;
+  border: 2px solid transparent;
+
+  transition: all 0.3s;
+}
+
+.textarea:focus ~ .textarea-label,
+.textarea:valid ~ .textarea-label {
+  font-size: 1.4rem;
+  top: 2rem;
+}
+
+.textarea:valid {
+  border: 2px solid rgba(1, 219, 194, 1);
+}
+
+.textarea:focus ~ .textarea-label {
+  color: rgba(1, 219, 194, 1);
+}
+
+.btn {
+  background-color: rgba(1, 219, 194, 1);
+  height: 5.6rem;
+  width: 100%;
+  border: none;
+  color: rgba(5, 12, 25, 1);
+  font-size: 1.8rem;
+  font-family: inherit;
+
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0 3px 20px rgba(1, 219, 194, 0.215),
+    0 3px 30px rgba(1, 219, 194, 0.215), 0 3px 40px rgba(1, 219, 194, 0.215);
+}
+
+.border--bottom::before {
+  content: "";
+
+  position: absolute;
+  left: -3.2rem;
+  bottom: -3.2rem;
+
+  width: 8rem;
+  height: 12rem;
+
+  border-bottom: 3px solid rgba(1, 219, 194, 1);
+  border-left: 3px solid rgba(1, 219, 194, 1);
+
+  transition: all 0.3s;
+}
+
+.border--bottom::after {
+  content: "";
+
+  position: absolute;
+  right: -3.2rem;
+  bottom: -3.2rem;
+
+  width: 8rem;
+  height: 12rem;
+
+  border-right: 3px solid rgba(1, 219, 194, 1);
+  border-bottom: 3px solid rgba(1, 219, 194, 1);
+}
+
+.border--top::before {
+  content: "";
+
+  position: absolute;
+  left: -3.2rem;
+  top: -3.2rem;
+
+  width: 8rem;
+  height: 12rem;
+
+  border-top: 3px solid rgba(1, 219, 194, 1);
+  border-left: 3px solid rgba(1, 219, 194, 1);
+}
+
+.border--top::after {
+  content: "";
+
+  position: absolute;
+  right: -3.2rem;
+  top: -3.2rem;
+
+  width: 8rem;
+  height: 12rem;
+
+  border-top: 3px solid rgba(1, 219, 194, 1);
+  border-right: 3px solid rgba(1, 219, 194, 1);
+}
